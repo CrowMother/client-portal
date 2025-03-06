@@ -1,15 +1,17 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 3001;
+const port = 3001;
 
-// Middleware to parse JSON requests
+// Enable CORS for all routes
+app.use(cors());
+// Parse JSON
 app.use(express.json());
 
-// Simple API endpoint for testing
 app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello from the backend!' });
 });
 
 app.listen(port, () => {
-  console.log(`Backend server is running on port ${port}`);
+  console.log(`Backend server running on port ${port}`);
 });
