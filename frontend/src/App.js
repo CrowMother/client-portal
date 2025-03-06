@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 function App() {
   const [message, setMessage] = useState('Loading...');
 
+  // App.js
   useEffect(() => {
-    // Fetch from our backend API
     fetch('/api/hello')
       .then(response => response.json())
       .then(data => setMessage(data.message))
@@ -13,6 +13,8 @@ function App() {
         setMessage('Error fetching message');
       });
   }, []);
+
+  
 
   return (
     <div className="App">
