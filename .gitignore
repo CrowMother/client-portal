@@ -1,2 +1,8 @@
-node_modules
+# Folders to ignore
+node_modules/
+logs/
+build/
+# files to ignore
 .env
+# file types to ignore
+*.log
